@@ -1,3 +1,11 @@
+import os
+import django
+
+# calculated paths for django and the site
+# used as starting points for various other paths
+DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+
 # Django settings for klingsbo project.
 
 DEBUG = True
@@ -106,10 +114,9 @@ ROOT_URLCONF = 'klingsbo.urls'
 WSGI_APPLICATION = 'klingsbo.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+  os.path.join(SITE_ROOT, 'templates')
 )
+
 
 INSTALLED_APPS = (
     'django.contrib.auth',

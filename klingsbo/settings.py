@@ -8,7 +8,7 @@ SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 # Django settings for klingsbo project.
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -130,6 +130,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'polls',
+    'south',
     'gunicorn',
 )
 

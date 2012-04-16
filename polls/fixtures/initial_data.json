@@ -1,0 +1,55 @@
+[
+  {
+    "pk": 1, 
+    "model": "auth.user", 
+    "fields": {
+      "username": "admin", 
+      "first_name": "", 
+      "last_name": "", 
+      "is_active": true, 
+      "is_superuser": true, 
+      "is_staff": true, 
+      "last_login": "2012-04-14T21:20:39.222Z", 
+      "groups": [], 
+      "user_permissions": [], 
+      "password": "pbkdf2_sha256$10000$i1gaGEbmDkkt$mwxZieQ4KuKX89iyRx68MeR/9wWH9YhmUSKqvs/Npgc=", 
+      "email": "admin@example.com ", 
+      "date_joined": "2012-04-14T00:25:48.429Z"
+    }
+  },
+  {
+    "pk": 1, 
+    "model": "polls.poll", 
+    "fields": {
+      "pub_date": "2012-04-14T00:54:01.570Z", 
+      "question": "What's new?"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "polls.choice", 
+    "fields": {
+      "votes": 2, 
+      "poll": 1, 
+      "choice": "Not Much"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "polls.choice", 
+    "fields": {
+      "votes": 5, 
+      "poll": 1, 
+      "choice": "The Sky"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "polls.choice", 
+    "fields": {
+      "votes": 2, 
+      "poll": 1, 
+      "choice": "Just hacking again"
+    }
+  }
+]

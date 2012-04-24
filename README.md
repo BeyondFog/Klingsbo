@@ -12,7 +12,7 @@ To setup Klingsbo:
 
 1) run 'pip install requirements.txt' from within the project directory.
 
-2) run 'python manage.py syncdb'
+2) run 'python manage.py syncdb --noinput'
 
 3) run 'python manage.py migrate'
 

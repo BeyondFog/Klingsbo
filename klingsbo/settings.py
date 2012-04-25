@@ -35,7 +35,7 @@ try:
   DATABASES = {
       'default': {
           'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-          'NAME': 'klingsbo',                      # Or path to database file if using sqlite3.
+          'NAME': 'postgres',                      # Or path to database file if using sqlite3.
           'USER': os.environ['POSTGRESQL_USERNAME'],                      # Not used with sqlite3.
           'PASSWORD': os.environ['POSTGRESQL_PASSWORD'],                  # Not used with sqlite3.
           'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.

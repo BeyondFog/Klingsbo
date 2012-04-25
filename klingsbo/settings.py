@@ -38,7 +38,7 @@ try:
           'NAME': 'postgres',                      # Or path to database file if using sqlite3.
           'USER': os.environ['POSTGRESQL_USERNAME'],                      # Not used with sqlite3.
           'PASSWORD': os.environ['POSTGRESQL_PASSWORD'],                  # Not used with sqlite3.
-          'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+          'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
           'PORT': os.environ['POSTGRESQL_PORT'],                      # Set to empty string for default. Not used with sqlite3.
       }
   }

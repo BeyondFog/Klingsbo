@@ -30,18 +30,30 @@ MANAGERS = ADMINS
 #}
 
 
-
-# example dev config with postgres
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'klingsbo',                      # Or path to database file if using sqlite3.
-        'USER': 'klingsbo',                      # Not used with sqlite3.
-        'PASSWORD': 'klingsbo',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
-}
+try:
+  #Strider db env variables
+  DATABASES = {
+      'default': {
+          'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+          'NAME': 'klingsbo',                      # Or path to database file if using sqlite3.
+          'USER': os.environ['POSTGRESQL_USERNAME'],                      # Not used with sqlite3.
+          'PASSWORD': os.environ['POSTGRESQL_PASSWORD'],                  # Not used with sqlite3.
+          'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+          'PORT': os.environ['POSTGRESQL_PORT'],                      # Set to empty string for default. Not used with sqlite3.
+      }
+  }
+except:  
+  # example dev config with postgres
+  DATABASES = {
+      'default': {
+          'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+          'NAME': 'klingsbo',                      # Or path to database file if using sqlite3.
+          'USER': 'klingsbo',                      # Not used with sqlite3.
+          'PASSWORD': 'klingsbo',                  # Not used with sqlite3.
+          'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+          'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+      }
+  }
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

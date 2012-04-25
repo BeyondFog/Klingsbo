@@ -15,6 +15,7 @@ class PollsViewsTestCase(TestCase):
         poll_1 = resp.context['latest_poll_list'][0]
         self.assertEqual(poll_1.question, 'What\'s new?')
         self.assertEqual(poll_1.choice_set.count(), 3)
+
         choices = poll_1.choice_set.all()
         self.assertEqual(choices[0].choice, 'Not Much')
         self.assertEqual(choices[0].votes, 0)

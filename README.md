@@ -8,7 +8,7 @@ To setup Klingsbo on your dev box:
 
 1) create and activate a virtualenv
 
-2) run 'pip install requirements.txt' from within the project directory.
+2) run 'pip install -r requirements.txt' from within the project directory.
 
 3) run 'python manage.py syncdb --noinput'
 

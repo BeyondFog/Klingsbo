@@ -20,13 +20,8 @@ The 'migrate' command will load the initial_data.json file which creates an admi
 
 **Database setup:** Klingsbo is configured to use PostgreSQL locally (ie on your dev box) and also when running the test suite on Strider. There is a sqlite dev configuration commented out in settings.py should you wish to to use sqlite locally instead of PostgreSQL. Heroku will add its own block of code to settings.py for production PostgreSQL.
 
-**Heroku setup:** Strider will setup a new application on Heroku and do a git push to Heroku after each successful test run (if configured to 'deploy on green'). At this time, Strider does not run any 'one time' commands such as 'syncdb' or 'migrate'. You will need to run both of these commands before your project will run properly on Heroku.  
+**Heroku setup:** Strider will setup a new application on Heroku and do a git push to Heroku after each successful test run (if configured to 'deploy on green'). Strider will also run 'syncdb' and 'migrate' after each code push.
 
-The easiest way to do so is to install the [Heroku Toolbelt](https://toolbelt.heroku.com/), point the toolbelt at the right app, and then execute the commands from the command line like so:
-
-1) 'heroku run python manage.py syncdb --noinput'
-
-2) 'heroku run python manage.py migrate'
 
 For more details on running Django projects on Heroku, see [Getting Started with Django on Heroku/Cedar](https://devcenter.heroku.com/articles/django)
 
